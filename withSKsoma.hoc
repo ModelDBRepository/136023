@@ -1,0 +1,53 @@
+create soma
+access soma
+
+load_file("avail.ses")
+
+L = 20
+diam = 20
+
+v_init = -55.2
+tstop = 10000
+celsius = 23
+forall Ra = 70
+
+	insert hcn12_gp
+		gbar_hcn12_gp = 0.01
+		ehcn_hcn12_gp = -20
+	insert hcn2_gp
+		gbar_hcn2_gp = 0.04
+		ehcn_hcn2_gp = -20
+	insert leak_gp
+		gbar_leak_gp = 0.0001
+		e_leak_gp = -65
+	insert na1_gp
+		gbar_na1_gp = 0.2
+	insert na6_gp
+		gbar_na6_gp = 0.12   //was .12
+	insert kv1_gp
+		gbar_kv1_gp = 0.008
+	insert kv2_gp
+		gbar_kv2_gp = 20
+	insert kv3_gp
+		gbar_kv3_gp = 0.1
+	insert kv4_gp
+		gbar_kv4_gp = 0.05   	//was 0.05
+//	insert kir2_gp
+//		gbar_kir2_gp = 0
+	insert kcnq_gp
+		gbar_kcnq_gp = 0.004
+//	insert bk_gp
+//		gbar_bk_gp = 0
+	insert sk_gp
+		gbar_sk_gp = 0.15		//0.15
+//	insert cal_gp
+//		gbar_cal_gp = 0
+	insert cap_gp
+		gbar_cap_gp = 2e-04
+	insert ca_gp
+	insert Gfluct
+		g_e0_Gfluct = 1.21e-06
+		std_e_Gfluct = 0.001		//0.001 when using noise
+		tau_e_Gfluct = 5
+		E_e_Gfluct = -70
+// Note: Gflut is syn.mod

@@ -1,0 +1,8 @@
+load_file("nrngui.hoc")
+
+xpanel("choose sim for Diester et al. 2009")
+xlabel("Choose a simulation type for Diester et al. 2009 fig 7a, 7b")
+xbutton("with SK soma","{ load_file(\"withSKsoma.hoc\") init() }")
+xbutton("no SK soma","{ load_file(\"noSKsoma.hoc\") init() }")
+xbutton("quit (to potentially run other choice)","quit()")
+xpanel()
